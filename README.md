@@ -4,18 +4,18 @@ Ce script est conçu pour analyser les données sur les antennes et pylônes de 
 
 #### Fonctionnalités
 
--   **Traitement de** **d****onnées** **g****éographiques** : Le script lit un fichier CSV contenant des informations géographiques (Ville, Latitude, Longitude, Densité).
+-   **Traitement de données géographiques** : Le script lit un fichier CSV contenant des informations géographiques (Ville, Latitude, Longitude, Densité).
     
--   **Requêtes API** **m****ultiples** : Pour chaque ligne du fichier CSV, il effectue plusieurs requêtes à l'API de l'ANFR pour obtenir des données sur les antennes et pylônes.
+-   **Requêtes API multiples** : Pour chaque ligne du fichier CSV, il effectue plusieurs requêtes à l'API de l'ANFR pour obtenir des données sur les antennes et pylônes.
     
--   **Traitement par** **r****ayon** : Le script exécute trois passages sur les données, chacun avec un rayon différent (1500, 2500, et 5000 mètres), et stocke les résultats dans des fichiers distincts.
+-   **Traitement par rayon** : Le script exécute trois passages sur les données, chacun avec un rayon différent (1500, 2500, et 5000 mètres), et stocke les résultats dans des fichiers distincts.
     
--   **Gestion d'****e****rreurs de** **c****onnexion** : En cas d'erreur de connexion ou de délai d'attente expiré, il tente de réexécuter la requête.
+-   **Gestion d'erreurs de connexion** : En cas d'erreur de connexion ou de délai d'attente expiré, il tente de réexécuter la requête.
     
 
 #### Structure du script
 
-1.  **Définition des** **f****onctions**
+1.  **Définition des fonctions**
     
     -   `construire_url_api`: Construit l'URL pour les requêtes à l'API de l'ANFR.
         
@@ -31,7 +31,7 @@ Ce script est conçu pour analyser les données sur les antennes et pylônes de 
         
     -   `traiter_fichier`: Orchestre le traitement du fichier CSV d'entrée et écrit les résultats dans un fichier de sortie.
         
-2.  **Exécution** **p****rincipale**
+2.  **Exécution principale**
     
     -   Le script lit le fichier CSV d'entrée.
         
