@@ -19,13 +19,17 @@ def construire_url_api(lat, lon, rayon, opérateur=None, génération=None, pour
         "lang": "fr"
     }
 
+    # Ajout du paramètre 'facet' pour les requêtes de pylônes
     if pour_pylônes:
         params["facet"] = "sup_id"
-    else:
-        if opérateur:
-            params["refine.adm_lb_nom"] = opérateur
-        if génération:
-            params["refine.generation"] = génération
+    
+    # Ajout du paramètre 'refine.adm_lb_nom' pour les opérateurs
+    if opérateur:
+        params["refine.adm_lb_nom"] = opérateur
+    
+    # Ajout du paramètre 'refine.generation' pour les générations
+    if génération:
+        params["refine.generation"] = génération
 
     url_params = urlencode(params, doseq=True)
     url_params = url_params.replace('+', '%20').replace('%2C', ',')
